@@ -1,0 +1,5 @@
+"date","origin","destination","airline","distance_km","distance_source"
+"2025-02-15","SAW","FRA","Pegasus Airlines","1900.77","calculated great-circle"
+"2025-02-11","FRA","SAW","Pegasus Airlines","1900.77","calculated great-circle"
+"2024-08-29","SAW","FRA","AnadoluJet","1900.77","supplied"
+"2024-08-23","FRA","SAW","Pegasus Airlines","1900.77","supplied"

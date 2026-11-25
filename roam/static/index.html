@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <title>Roam — Your world, remembered</title>
+  <link rel="icon" href="static/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/shared/hub-link.css">
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/app.js" defer></script>
+</head>
+<body>
+  <a class="hub-link" href="/" aria-label="Back to hub">⌂ Hub</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Roam home"><span class="brand-symbol">r<span>↗</span></span>roam<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation">
+      <a class="nav-button" href="static/flights.html">Flights ↗</a>
+      <button class="nav-button active" data-view="map" aria-current="page">My world</button>
+      <button class="nav-button" data-view="bucket">Bucket list <span id="nav-bucket">0</span></button>
+      <button class="nav-button" data-view="trips">Trip journal</button>
+      <button class="nav-button" data-view="stadiums">Visited stadiums <span id="nav-stadiums">0</span></button>
+    </nav>
+    <div class="local-badge"><span></span> LOCAL & PRIVATE <span class="avatar">ME</span></div>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <div><p class="eyebrow">A LITTLE CURIOSITY. A WHOLE WORLD.</p><h1>Your world, <span>remembered.</span></h1><p class="subtitle">The places you've been. The places you'll go. All in one little corner of the world.</p></div>
+      <button class="button primary" id="new-trip"><span>＋</span> Add a trip</button>
+    </section>
+
+    <div id="global-error" class="error-banner" role="alert" hidden></div>
+    <section class="stats" aria-label="Travel statistics">
+      <article class="stat"><span class="stat-icon mint">◈</span><div><span class="stat-label">Places visited</span><div class="stat-value"><span id="stat-visited">0</span><small id="stat-total"> / —</small></div></div><span class="stat-note">little stamps, big stories</span></article>
+      <article class="stat"><span class="stat-icon lavender">◎</span><div><span class="stat-label">World explored</span><div class="stat-value"><span id="stat-percent">0</span><small>%</small></div></div><div class="mini-progress"><span id="world-progress"></span></div></article>
+      <article class="stat"><span class="stat-icon peach">✦</span><div><span class="stat-label">On your bucket list</span><div class="stat-value" id="stat-bucket">0</div></div><span class="stat-note">adventures in the making</span></article>
+      <article class="stat"><span class="stat-icon blue">▧</span><div><span class="stat-label">Trips in your journal</span><div class="stat-value" id="stat-trips">0</div></div><span class="stat-note">make the memories last</span></article>
+    </section>
+
+    <section id="map-view">
+      <div class="workspace">
+        <section class="map-card" aria-label="Your interactive travel map">
+          <div class="map-toolbar">
+            <div class="segmented" aria-label="Map filter"><button class="active" data-filter="all">All places</button><button data-filter="visited">Visited</button><button data-filter="bucket">Want to go</button></div>
+            <select id="continent-filter" aria-label="Filter by continent"><option value="">All continents</option></select>
+          </div>
+          <div class="map-viewport" id="map-viewport">
+            <div class="map-watermark"><span>THE WORLD IS</span><strong>still full of firsts.</strong></div>
+            <svg id="world-map" viewBox="0 0 1000 500" role="group" aria-label="Interactive world map. Select a country to track your travels."><g id="map-transform"><g id="graticule"></g><g id="country-paths"></g></g></svg>
+            <div id="map-tooltip" class="map-tooltip" hidden></div>
+            <div class="map-controls"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-reset" aria-label="Reset map view">⌂</button></div>
+            <div class="map-legend"><span><i class="visited-dot"></i>Visited</span><span><i class="bucket-dot"></i>Want to go</span><span><i class="unvisited-dot"></i>Not yet</span></div>
+            <span class="map-hint">Drag to explore · Scroll to zoom</span>
+          </div>
+          <div class="map-footer"><span><span class="live-dot"></span> Your own little atlas</span><span>Natural Earth · Countries & territories</span></div>
+        </section>
+
+        <aside class="country-panel" aria-label="Country details">
+          <div id="country-empty" class="country-empty">
+            <div class="compass">✳</div><span class="eyebrow">EVERY JOURNEY STARTS SOMEWHERE</span><h2>Where has life<br>taken you?</h2><p>Choose a country on the map or search below. Start coloring in your story.</p><button id="explore-countries" class="button secondary">Find a place <span>↘</span></button>
+            <div class="empty-doodle">↝ &nbsp; ✦ &nbsp; ↗</div>
+          </div>
+          <div id="country-detail" hidden>
+            <div class="country-detail-top"><span id="detail-flag" class="large-flag"></span><button id="close-country" class="icon-button" aria-label="Close country details">×</button></div>
+            <span class="eyebrow" id="detail-region"></span><h2 id="detail-name"></h2><p class="country-subtitle" id="detail-caption"></p>
+            <div class="status-actions"><button class="button" id="mark-visited">✓ I've been here</button><button class="button" id="mark-bucket">✧ Want to go</button><button class="text-button" id="clear-status">Remove from my map</button></div>
+            <label class="field-label" for="country-notes">A note to remember</label><textarea id="country-notes" maxlength="5000" rows="4" placeholder="A favorite place, a little memory, a reason to go..."></textarea>
+            <button class="button secondary small full-width" id="save-country-notes">Save note</button>
+            <button class="text-button full-width" id="country-add-trip">＋ Add a trip here</button>
+          </div>
+        </aside>
+      </div>
+      <section class="places-section">
+        <div class="section-heading"><div><p class="eyebrow">ONE PLACE AT A TIME</p><h2 id="places-heading">Make the map yours</h2></div><label class="search-box"><span>⌕</span><input id="country-search" type="search" placeholder="Find a country..." aria-label="Search countries"></label></div>
+        <p id="places-summary" class="muted"></p><div id="country-grid" class="country-grid"></div><button id="show-more" class="button secondary show-more" hidden>Show more places</button>
+      </section>
+    </section>
+
+    <section id="trips-view" hidden>
+      <div class="section-heading"><div><p class="eyebrow">THE STORIES BEHIND THE STAMPS</p><h2>Your travel journal</h2></div><p class="muted">Past adventures & future plans</p></div>
+      <div id="trip-list" class="trip-list"></div>
+    </section>
+    <section id="stadiums-view" hidden>
+      <div class="section-heading"><div><p class="eyebrow">THE GROUNDS YOU'VE BEEN TO</p><h2>Your stadium visits</h2></div><button class="button primary" id="new-stadium"><span>＋</span> Add a stadium</button></div>
+      <p class="muted">Keep a little record of the grounds, matches, and memories.</p>
+      <section class="map-card stadium-map-card" aria-label="Map of visited stadiums">
+        <div class="map-toolbar"><span class="muted">Stadium locations</span><span id="stadium-map-count" class="muted"></span></div>
+        <div id="stadium-map-viewport" class="map-viewport stadium-map-viewport">
+          <svg id="stadium-world-map" viewBox="0 0 1000 500" role="group" aria-label="World map showing visited stadium locations">
+            <g id="stadium-map-transform"><g id="stadium-map-land"></g><g id="stadium-map-markers"></g></g>
+          </svg>
+          <div id="stadium-map-tooltip" class="map-tooltip" hidden></div>
+          <div class="map-controls">
+            <button id="stadium-zoom-in" aria-label="Zoom in">＋</button>
+            <button id="stadium-zoom-out" aria-label="Zoom out">−</button>
+            <button id="stadium-zoom-reset" aria-label="Reset stadium map view">⌂</button>
+          </div>
+          <span class="map-hint">Scroll to zoom</span>
+        </div>
+        <div class="map-footer"><span><span class="live-dot"></span> Visited stadiums</span><span>Natural Earth · Countries & territories</span></div>
+      </section>
+      <div id="stadium-list" class="stadium-list"></div>
+    </section>
+    <footer class="page-footer"><span class="footer-brand">roam.</span><span>Made for your memories. Stored on your computer.</span><span id="coverage-note">Map data: Natural Earth (public domain).</span></footer>
+  </main>
+
+  <dialog id="trip-dialog">
+    <form id="trip-form">
+      <div class="dialog-heading"><div><p class="eyebrow">ANOTHER CHAPTER</p><h2 id="trip-dialog-title">A trip to remember</h2></div><button class="icon-button" id="close-trip" type="button" aria-label="Close trip form">×</button></div>
+      <input type="hidden" id="trip-id">
+      <label class="field-label" for="trip-title">Give your trip a name</label><input id="trip-title" placeholder="A summer under the Italian sun" maxlength="100" required>
+      <label class="field-label" for="trip-country">Country or territory</label><select id="trip-country" required></select>
+      <div class="date-fields"><div><label class="field-label" for="trip-start">From</label><input type="date" id="trip-start" required></div><div><label class="field-label" for="trip-end">Until</label><input type="date" id="trip-end" required></div></div>
+      <label class="field-label" for="trip-notes">The little details</label><textarea id="trip-notes" rows="4" maxlength="5000" placeholder="The plans, the people, the moments worth keeping..."></textarea>
+      <p class="form-help">Journal entries don't change your visited map. Mark countries visited when you're ready.</p>
+      <div id="trip-error" class="error-banner" role="alert" hidden></div><button class="button primary full-width" id="save-trip" type="submit">Save this chapter <span>↗</span></button>
+    </form>
+  </dialog>
+  <dialog id="delete-dialog"><h2>Delete this trip?</h2><p>This removes the journal entry permanently. Your map stays as it is.</p><div class="dialog-actions"><button class="button secondary" id="cancel-delete">Keep it</button><button class="button danger" id="confirm-delete">Delete trip</button></div></dialog>
+  <dialog id="stadium-dialog">
+    <form id="stadium-form">
+      <div class="dialog-heading"><div><p class="eyebrow">A NEW GROUND TO REMEMBER</p><h2 id="stadium-dialog-title">Add a stadium visit</h2></div><button class="icon-button" id="close-stadium" type="button" aria-label="Close stadium form">×</button></div>
+      <input type="hidden" id="stadium-id">
+      <label class="field-label" for="stadium-name">Stadium name</label><input id="stadium-name" maxlength="120" required placeholder="Name of the ground">
+      <label class="field-label" for="stadium-location">City or location</label><input id="stadium-location" maxlength="120" placeholder="City, country">
+      <label class="field-label" for="stadium-visited-on">Date visited <span class="muted">(optional)</span></label><input type="date" id="stadium-visited-on">
+      <div class="date-fields">
+        <div><label class="field-label" for="stadium-latitude">Latitude <span class="muted">(optional)</span></label><input type="number" id="stadium-latitude" min="-90" max="90" step="any"></div>
+        <div><label class="field-label" for="stadium-longitude">Longitude <span class="muted">(optional)</span></label><input type="number" id="stadium-longitude" min="-180" max="180" step="any"></div>
+      </div>
+      <label class="field-label" for="stadium-map-url">Google Maps link <span class="muted">(optional)</span></label><input type="url" id="stadium-map-url" maxlength="500" placeholder="https://maps.app.goo.gl/...">
+      <label class="field-label" for="stadium-notes">Match or memory <span class="muted">(optional)</span></label><textarea id="stadium-notes" rows="4" maxlength="5000" placeholder="The match, the atmosphere, who you went with..."></textarea>
+      <div id="stadium-error" class="error-banner" role="alert" hidden></div><button class="button primary full-width" id="save-stadium" type="submit">Save stadium <span>↗</span></button>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

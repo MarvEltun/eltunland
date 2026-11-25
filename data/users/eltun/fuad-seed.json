@@ -1,0 +1,947 @@
+{
+ "car": {
+  "plate": "MTK EI 158"
+ },
+ "expenses": [
+  {
+   "id": "history-03-0",
+   "date": "2026-03",
+   "category": "Registration",
+   "amount": 120,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-03-1",
+   "date": "2026-03-19",
+   "category": "Gas",
+   "amount": 60,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-03-2",
+   "date": "2026-03",
+   "category": "Insurance",
+   "amount": 98,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-03-3",
+   "date": "2026-03-23",
+   "category": "Gas",
+   "amount": 66,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-03-4",
+   "date": "2026-03-30",
+   "category": "Gas",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-0",
+   "date": "2026-04-02",
+   "category": "Gas",
+   "amount": 57,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-1",
+   "date": "2026-04-04",
+   "category": "Gas",
+   "amount": 51,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-2",
+   "date": "2026-04-06",
+   "category": "Gas",
+   "amount": 61,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-3",
+   "date": "2026-04",
+   "category": "ACV",
+   "amount": 75,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-4",
+   "date": "2026-04-09",
+   "category": "Gas",
+   "amount": 58,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-5",
+   "date": "2026-04-13",
+   "category": "Gas",
+   "amount": 32,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-6",
+   "date": "2026-04-16",
+   "category": "Gas",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-7",
+   "date": "2026-04-19",
+   "category": "Gas",
+   "amount": 53,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-8",
+   "date": "2026-04",
+   "category": "Insurance",
+   "amount": 98,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-9",
+   "date": "2026-04-28",
+   "category": "Gas",
+   "amount": 56,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-04-10",
+   "date": "2026-04",
+   "category": "Tax",
+   "amount": 58,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-0",
+   "date": "2026-05-02",
+   "category": "Gas",
+   "amount": 42,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-1",
+   "date": "2026-05",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-2",
+   "date": "2026-05-07",
+   "category": "Gas",
+   "amount": 60,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-3",
+   "date": "2026-05-09",
+   "category": "Gas",
+   "amount": 53,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-4",
+   "date": "2026-05-14",
+   "category": "Gas",
+   "amount": 56,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-5",
+   "date": "2026-05-14",
+   "category": "Gas",
+   "amount": 52,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-6",
+   "date": "2026-05-15",
+   "category": "Gas",
+   "amount": 52,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-7",
+   "date": "2026-05-19",
+   "category": "Gas",
+   "amount": 59,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-8",
+   "date": "2026-05",
+   "category": "Insurance",
+   "amount": 98,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-9",
+   "date": "2026-05-21",
+   "category": "Gas",
+   "amount": 25,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-10",
+   "date": "2026-05-22",
+   "category": "Gas",
+   "amount": 85,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-11",
+   "date": "2026-05-24",
+   "category": "Gas",
+   "amount": 80,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-12",
+   "date": "2026-05-25",
+   "category": "Gas",
+   "amount": 50,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-13",
+   "date": "2026-05-30",
+   "category": "Gas",
+   "amount": 50,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-05-14",
+   "date": "2026-05",
+   "category": "Maintenance",
+   "amount": 80,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-0",
+   "date": "2026-06",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-1",
+   "date": "2026-06-07",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-2",
+   "date": "2026-06",
+   "category": "Parking ticket",
+   "amount": 48,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-3",
+   "date": "2026-06-13",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-4",
+   "date": "2026-06-14",
+   "category": "Gas",
+   "amount": 15,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-5",
+   "date": "2026-06",
+   "category": "Insurance",
+   "amount": 98,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-06-6",
+   "date": "2026-06-24",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-0",
+   "date": "2026-07",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-1",
+   "date": "2026-07-16",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-2",
+   "date": "2026-07-18",
+   "category": "Gas",
+   "amount": 104,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-3",
+   "date": "2026-07-20",
+   "category": "Gas",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-4",
+   "date": "2026-07",
+   "category": "Insurance",
+   "amount": 98,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-5",
+   "date": "2026-07",
+   "category": "Maintenance",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-6",
+   "date": "2026-07-24",
+   "category": "Gas",
+   "amount": 65,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-7",
+   "date": "2026-07-25",
+   "category": "Gas",
+   "amount": 33,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-8",
+   "date": "2026-07-26",
+   "category": "Gas",
+   "amount": 48,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-07-9",
+   "date": "2026-07-29",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-0",
+   "date": "2026-08-01",
+   "category": "Gas",
+   "amount": 24,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-1",
+   "date": "2026-08-03",
+   "category": "Gas",
+   "amount": 12,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-2",
+   "date": "2026-08-03",
+   "category": "Gas",
+   "amount": 13,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-3",
+   "date": "2026-08-04",
+   "category": "Gas",
+   "amount": 15,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-4",
+   "date": "2026-08",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-5",
+   "date": "2026-08-07",
+   "category": "Gas",
+   "amount": 40,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-6",
+   "date": "2026-08",
+   "category": "Speed ticket",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-7",
+   "date": "2026-08",
+   "category": "Maintenance",
+   "amount": 54,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-8",
+   "date": "2026-08-10",
+   "category": "Gas",
+   "amount": 57,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-9",
+   "date": "2026-08",
+   "category": "Speed ticket",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-10",
+   "date": "2026-08-16",
+   "category": "Gas",
+   "amount": 66,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-11",
+   "date": "2026-08",
+   "category": "Speed ticket",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-12",
+   "date": "2026-08",
+   "category": "Speed ticket",
+   "amount": 117,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-13",
+   "date": "2026-08",
+   "category": "Maintenance",
+   "amount": 472,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-14",
+   "date": "2026-08",
+   "category": "Insurance",
+   "amount": 98,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-15",
+   "date": "2026-08",
+   "category": "Insurance",
+   "amount": 41,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-16",
+   "date": "2026-08-26",
+   "category": "Gas",
+   "amount": 47,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-17",
+   "date": "2026-08",
+   "category": "Maintenance",
+   "amount": 10,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-08-18",
+   "date": "2026-08-29",
+   "category": "Gas",
+   "amount": 12,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-0",
+   "date": "2026-09",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-1",
+   "date": "2026-09-04",
+   "category": "Gas",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-2",
+   "date": "2026-09-05",
+   "category": "Gas",
+   "amount": 54,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-3",
+   "date": "2026-09",
+   "category": "Maintenance",
+   "amount": 270,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-4",
+   "date": "2026-09",
+   "category": "Maintenance",
+   "amount": 150,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-5",
+   "date": "2026-09",
+   "category": "Maintenance",
+   "amount": 70,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-6",
+   "date": "2026-09-09",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-7",
+   "date": "2026-09-12",
+   "category": "Gas",
+   "amount": 25,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-8",
+   "date": "2026-09-15",
+   "category": "Gas",
+   "amount": 10,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-9",
+   "date": "2026-09-18",
+   "category": "Gas",
+   "amount": 67,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-10",
+   "date": "2026-09-19",
+   "category": "Gas",
+   "amount": 54,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-11",
+   "date": "2026-09-23",
+   "category": "Gas",
+   "amount": 20,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-12",
+   "date": "2026-09",
+   "category": "Insurance",
+   "amount": 104,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-09-13",
+   "date": "2026-09-25",
+   "category": "Gas",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-0",
+   "date": "2026-10-02",
+   "category": "Gas",
+   "amount": 62,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-1",
+   "date": "2026-10",
+   "category": "Speed ticket",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-2",
+   "date": "2026-10",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-3",
+   "date": "2026-10-10",
+   "category": "Gas",
+   "amount": 55,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-4",
+   "date": "2026-10-23",
+   "category": "Gas",
+   "amount": 54,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-5",
+   "date": "2026-10-25",
+   "category": "Gas",
+   "amount": 15,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-6",
+   "date": "2026-10",
+   "category": "Insurance",
+   "amount": 104,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-7",
+   "date": "2026-10-26",
+   "category": "Gas",
+   "amount": 66,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-8",
+   "date": "2026-10-27",
+   "category": "Gas",
+   "amount": 30,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-10-9",
+   "date": "2026-10-29",
+   "category": "Gas",
+   "amount": 58,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-11-0",
+   "date": "2026-11",
+   "category": "Installment",
+   "amount": 867,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-11-1",
+   "date": "2026-11",
+   "category": "Insurance",
+   "amount": 9,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  },
+  {
+   "id": "history-11-2",
+   "date": "2026-11-12",
+   "category": "Gas",
+   "amount": 49,
+   "litres": null,
+   "odometer": null,
+   "fullTank": false,
+   "notes": ""
+  }
+ ]
+}

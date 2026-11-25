@@ -1,0 +1,82 @@
+date	airline	destination_code	destination_icao_code	destination_latitude	destination_longitude	destination_name	origin_code	origin_icao_code	origin_latitude	origin_longitude	origin_name	distance	distance_units	duration	co2
+2/15/2025	Pegasus Airlines	FRA					SAW								
+2/11/2025	Pegasus Airlines	SAW					FRA								
+1/31/2025	Aegean	FRA					ATH								
+1/30/2025	Aegean	ATH					FRA								
+12/16/2024	Ryanair	HHN	EDFH	49.9487	7.26389	Frankfurt-Hahn Airport	KIR	EIKY	52.180901	-9.52378	Kerry Airport	1196.185687	km		
+12/15/2024	Ryanair	ORK	EICK	51.841301	-8.49111	Cork Airport	CRL	EBCI	50.460982	4.457158	Brussels South Charleroi Airport	914.8053621	km		
+12/13/2024	SAS	CPH	EKCH	55.61790085	12.65600014	Copenhagen Kastrup Airport	GOT	ESGG	57.66279984	12.27980042	Gothenburg-Landvetter Airport	228.5417279	km		
+12/13/2024	SAS	BRU	EBBR	50.901402	4.48444	Brussels Airport	CPH	EKCH	55.61790085	12.65600014	Copenhagen Kastrup Airport	754.3823929	km		
+12/12/2024	Lufthansa	GOT	ESGG	57.66279984	12.27980042	Gothenburg-Landvetter Airport	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	882.0471313	km		
+11/22/2024	Lufthansa	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	DUB	EIDW	53.428713	-6.262121	Dublin Airport	1085.828249	km		
+11/20/2024	Lufthansa	DUB	EIDW	53.428713	-6.262121	Dublin Airport	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	1085.828249	km		
+11/8/2024	SAS	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	BOO	ENBO	67.269203	14.3653	Bodø Airport	802.7003288	km		
+11/8/2024	Norwegian Air International (D8)	CPH	EKCH	55.61790085	12.65600014	Copenhagen Kastrup Airport	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	517.022701	km		
+11/6/2024	SAS	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	DUS	EDDL	51.289501	6.76678	Düsseldorf Airport	1026.057444	km		
+11/6/2024	SAS	BOO	ENBO	67.269203	14.3653	Bodø Airport	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	802.7003288	km		
+11/1/2024	Ryanair	CGN	EDDK	50.865898	7.14274	Cologne Bonn Airport	KUN	EYKA	54.96390152	24.08480072	Kaunas International Airport	1220.104577	km		
+10/30/2024	Ryanair	KUN	EYKA	54.96390152	24.08480072	Kaunas International Airport	BFS	EGAA	54.65750122	-6.215829849	Belfast International Airport	1926.711451	km		
+10/24/2024	Ryanair	EDI	EGPH	55.950145	-3.372288	Edinburgh Airport	NRN	EDLV	51.60240173	6.142169952	Weeze Airport	789.1528095	km		
+10/24/2024	Ryanair	BFS	EGAA	54.65750122	-6.215829849	Belfast International Airport	EDI	EGPH	55.950145	-3.372288	Edinburgh Airport	230.3013131	km		
+10/7/2024	Lufthansa	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	3367.922244	km		
+9/27/2024	Ryanair	HHN	EDFH	49.9487	7.26389	Frankfurt-Hahn Airport	STN	EGSS	51.884998	0.235	London Stansted Airport	537.438819	km		
+9/21/2024	Ryanair	STN	EGSS	51.884998	0.235	London Stansted Airport	HHN	EDFH	49.9487	7.26389	Frankfurt-Hahn Airport	537.438819	km		
+8/29/2024	AnadoluJet	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	1900.767486	km		
+8/29/2024	AnadoluJet	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	1745.189857	km		
+8/23/2024	Pegasus Airlines	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	1900.767486	km		
+8/23/2024	Pegasus Airlines	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	1745.189857	km		
+7/14/2024	Condor Flugdienst	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	SFO	KSFO	37.61899948	-122.375	San Francisco International Airport	9148.014703	km		
+7/8/2024	Alaska Airlines	SFO	KSFO	37.61899948	-122.375	San Francisco International Airport	JFK	KJFK	40.639447	-73.779317	John F Kennedy International Airport	4151.755142	km		
+7/2/2024	Atlantic Airways	JFK	KJFK	40.639447	-73.779317	John F Kennedy International Airport	LGW	EGKK	51.148771	-0.192089	London Gatwick Airport	5568.660736	km		
+4/15/2024	Ryanair	CRL	EBCI	50.460982	4.457158	Brussels South Charleroi Airport	TLS	LFBO	43.629101	1.36382	Toulouse-Blagnac Airport	794.818408	km		
+4/12/2024	Ryanair	GRO	LEGE	41.904639	2.761774	Girona-Costa Brava Airport	FKB	EDSB	48.7794	8.0805	Karlsruhe Baden-Baden Airport	869.6292161	km		
+4/9/2024	Aer Lingus	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	DUB	EIDW	53.428713	-6.262121	Dublin Airport	1085.828249	km		
+3/31/2024	Aer Lingus	DUB	EIDW	53.428713	-6.262121	Dublin Airport	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	1085.828249	km		
+2/20/2024	TUIfly	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	FNC	LPMA	32.697899	-16.7745	Madeira International Airport Cristiano Ronaldo	2835.677909	km		
+2/18/2024	easyJet	FNC	LPMA	32.697899	-16.7745	Madeira International Airport Cristiano Ronaldo	LIS	LPPT	38.7813	-9.13592	Humberto Delgado Airport (Lisbon Portela Airport)	965.1366866	km		
+2/14/2024	easyJet	OPO	LPPR	41.24810028	-8.681389809	Francisco de Sá Carneiro Airport	FKB	EDSB	48.7794	8.0805	Karlsruhe Baden-Baden Airport	1556.018366	km		
+12/1/2023	Norwegian Air International (D8)	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	MOL	ENML	62.744701	7.2625	Molde Airport, Årø	349.1527132	km		
+12/1/2023	Norwegian Air International (D8)	DUS	EDDL	51.289501	6.76678	Düsseldorf Airport	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	1026.057444	km		
+11/29/2023	Iberia	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	MAD	LEMD	40.471926	-3.56264	Adolfo Suárez Madrid–Barajas Airport	2414.763693	km		
+11/29/2023	Norwegian Air International (D8)	MOL	ENML	62.744701	7.2625	Molde Airport, Årø	OSL	ENGM	60.193901	11.1004	Oslo Airport, Gardermoen	349.1527132	km		
+11/25/2023	Ryanair	VLC	LEVC	39.4893	-0.481625	Valencia Airport	FKB	EDSB	48.7794	8.0805	Karlsruhe Baden-Baden Airport	1236.801194	km		
+11/10/2023	American Airlines	DFW	KDFW	32.896801	-97.038002	Dallas Fort Worth International Airport	CVG	KCVG	39.048801	-84.667801	Cincinnati Northern Kentucky International Airport	1304.760495	km		
+11/10/2023	American Airlines	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	DFW	KDFW	32.896801	-97.038002	Dallas Fort Worth International Airport	8257.417408	km		
+11/2/2023	American Airlines	CLT	KCLT	35.2140007	-80.94309998	Charlotte Douglas International Airport	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	7058.709852	km		
+11/2/2023	American Airlines	CVG	KCVG	39.048801	-84.667801	Cincinnati Northern Kentucky International Airport	CLT	KCLT	35.2140007	-80.94309998	Charlotte Douglas International Airport	539.1940651	km		
+10/2/2023	Lufthansa	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	3367.922244	km		
+9/2/2023	Azerbaijan Airlines	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	1976.521629	km		
+9/2/2023	Pegasus Airlines	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	NUE	EDDN	49.498699	11.078056	Nuremberg Airport	1785.309082	km		
+5/31/2023	Ryanair	CGN	EDDK	50.865898	7.14274	Cologne Bonn Airport	BGY	LIME	45.670725	9.709223	Milan Bergamo Airport / Antonio Locatelli Air Base	608.0079275	km		
+5/25/2023	Ryanair	BGY	LIME	45.670725	9.709223	Milan Bergamo Airport / Antonio Locatelli Air Base	CGN	EDDK	50.865898	7.14274	Cologne Bonn Airport	608.0079275	km		
+11/23/2022	Lufthansa	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	3367.922244	km		
+3/26/2022	Wizz Air	FMM	EDJA	47.98880005	10.23950005	Memmingen Allgau Airport	OTP	LROP	44.572127	26.103396	Bucharest Henri Coandă International Airport	1274.277064	km		
+3/18/2022	Ryanair	OTP	LROP	44.572127	26.103396	Bucharest Henri Coandă International Airport	BER	EDDB	52.362247	13.500672	Berlin Brandenburg Airport	1267.012534	km		
+12/26/2021	Wizz Air	BUD	LHBP	47.43018	19.262393	Budapest Liszt Ferenc International Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	2563.90255	km		
+10/24/2021	Pegasus Airlines	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	1976.521629	km		
+10/24/2021	Pegasus Airlines	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	MUC	EDDM	48.353802	11.7861	Munich Airport	1610.027911	km		
+10/24/2021	Pegasus Airlines	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	343.4645554	km		
+2/1/2021	Pegasus Airlines	MUC	EDDM	48.353802	11.7861	Munich Airport	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	1610.027911	km		
+1/31/2021	Azerbaijan Airlines	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	1976.521629	km		
+1/31/2021	Pegasus Airlines	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	343.4645554	km		
+12/10/2020	Azerbaijan Airlines	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	1976.521629	km		
+12/9/2020	Pegasus Airlines	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	MUC	EDDM	48.353802	11.7861	Munich Airport	1610.027911	km		
+12/9/2020	Pegasus Airlines	ADB	LTBJ	38.2924	27.157	Adnan Menderes International Airport	SAW	LTFJ	40.898602	29.3092	Istanbul Sabiha Gökçen International Airport	343.4645554	km		
+11/1/2020	Wizz Air	VIE	LOWW	48.110298	16.5697	Vienna International Airport	FCO	LIRF	41.804532	12.251998	Rome–Fiumicino Leonardo da Vinci International Airport	778.823958	km		
+10/9/2020	Wizz Air	MXP	LIMC	45.6306	8.72811	Milan Malpensa International Airport	VIE	LOWW	48.110298	16.5697	Vienna International Airport	656.3741752	km		
+5/13/2020	Belavia Belarusian Airlines	FRA	EDDF	50.036521	8.561268	Frankfurt Airport	MSQ	UMMS	53.888071	28.039964	Minsk National Airport	1396.413107	km		
+5/12/2020	Belavia Belarusian Airlines	MSQ	UMMS	53.888071	28.039964	Minsk National Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	2217.714388	km		
+3/5/2020	Wizz Air	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	BUD	LHBP	47.43018	19.262393	Budapest Liszt Ferenc International Airport	2563.90255	km		
+7/31/2019	Wizz Air	DTM	EDLW	51.518299	7.61224	Dortmund Airport	KUT	UGKO	42.176768	42.482393	David the Builder Kutaisi International Airport	2815.360743	km		
+4/14/2019	Azerbaijan Airlines	DME	UUDD	55.40879822	37.90629959	Domodedovo International Airport	KZN	UWKD	55.60620117	49.27870178	Kazan International Airport	715.6485602	km		
+4/14/2019	Azerbaijan Airlines	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	DME	UUDD	55.40879822	37.90629959	Domodedovo International Airport	1885.375027	km		
+4/6/2019	S7 Airlines	KZN	UWKD	55.60620117	49.27870178	Kazan International Airport	DME	UUDD	55.40879822	37.90629959	Domodedovo International Airport	715.6485602	km		
+4/5/2019	Azerbaijan Airlines	DME	UUDD	55.40879822	37.90629959	Domodedovo International Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	1885.375027	km		
+1/24/2018	Aeroflot Russian Airlines	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	SVO	UUEE	55.972599	37.4146	Sheremetyevo International Airport	1954.685116	km		
+1/24/2018	Aeroflot Russian Airlines	SVO	UUEE	55.972599	37.4146	Sheremetyevo International Airport	ATH	LGAV	37.936401	23.9445	Athens Eleftherios Venizelos International Airport	2241.935627	km		
+1/16/2018	Ryanair	ATH	LGAV	37.936401	23.9445	Athens Eleftherios Venizelos International Airport	BTS	LZIB	48.1702	17.2127	M. R. Štefánik Airport	1261.370187	km		
+1/9/2018	Ryanair	BTS	LZIB	48.1702	17.2127	M. R. Štefánik Airport	ATH	LGAV	37.936401	23.9445	Athens Eleftherios Venizelos International Airport	1261.370187	km		
+12/6/2017	Ryanair	ATH	LGAV	37.936401	23.9445	Athens Eleftherios Venizelos International Airport	CIA	LIRA	41.7994	12.5949	Ciampino–G. B. Pastine International Airport	1058.483817	km		
+12/3/2017	Ryanair	CIA	LIRA	41.7994	12.5949	Ciampino–G. B. Pastine International Airport	ATH	LGAV	37.936401	23.9445	Athens Eleftherios Venizelos International Airport	1058.483817	km		
+10/6/2017	Aeroflot Russian Airlines	ATH	LGAV	37.936401	23.9445	Athens Eleftherios Venizelos International Airport	SVO	UUEE	55.972599	37.4146	Sheremetyevo International Airport	2241.935627	km	3:33	201 kg pp
+10/6/2017	Aeroflot Russian Airlines	SVO	UUEE	55.972599	37.4146	Sheremetyevo International Airport	GYD	UBBB	40.46749878	50.04669952	Heydar Aliyev International Airport	1954.685116	km		

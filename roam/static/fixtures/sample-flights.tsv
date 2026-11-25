@@ -1,0 +1,7 @@
+date	airline	destination_code	destination_icao_code	destination_latitude	destination_longitude	destination_name	origin_code	origin_icao_code	origin_latitude	origin_longitude	origin_name	distance	distance_units	duration	co2
+2/15/2025	Alpha Air	CDG		49.0097	2.5479	Paris Charles de Gaulle	LHR		51.47	-0.4543	London Heathrow				
+2/11/2025	Alpha Air	LHR					CDG								
+8/29/2024	Beta Jet	AMS		52.3105	4.7683	Amsterdam Schiphol	LHR					370.5	km		
+6/1/2024	Beta Jet	LHR					AMS					370.5	km		
+3/10/2024	Gamma Wings	ATH		37.9364	23.9445	Athens Eleftherios Venizelos	CDG					2100.25	km		
+3/3/2024	Gamma Wings	CDG					ATH					2100.25	km		

@@ -1,0 +1,7 @@
+{
+  "car": { "plate": "AB 123" },
+  "expenses": [
+    { "id": "example-1", "date": "2026-03", "category": "Insurance", "amount": 90, "litres": null, "odometer": null, "fullTank": false, "notes": "" },
+    { "id": "example-2", "date": "2026-03-19", "category": "Gas", "amount": 60, "litres": null, "odometer": null, "fullTank": false, "notes": "" }
+  ]
+}

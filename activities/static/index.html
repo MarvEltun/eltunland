@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c34">
+  <title>My Activities — A little more outside</title>
+  <link rel="icon" type="image/svg+xml" href="static/icon.svg">
+  <link rel="stylesheet" href="/shared/hub-link.css">
+  <link rel="stylesheet" href="/shared/app-tabs.css">
+  <link rel="stylesheet" href="static/style.css">
+  <script type="module" src="static/app.js"></script>
+</head>
+<body>
+  <a class="hub-link right" href="/" aria-label="Back to hub">⌂ Hub</a>
+  <aside class="sidebar">
+    <a class="brand" href="./"><span class="brand-icon">↗</span><span>my activities<span class="brand-dot">.</span></span></a>
+    <p class="side-label">YOUR PERSONAL SPACE</p>
+    <a class="side-nav active" href="./"><span>◫</span> Activity explorer <span>↗</span></a>
+    <button class="side-nav" id="settings-button"><span>⚙</span> Connection settings</button>
+    <div class="side-note"><span class="small-orbit">◎</span><h2>One adventure<br>at a time.</h2><p>No leaderboards. No comparisons.<br>Just a space for your own journey.</p></div>
+    <div class="sidebar-bottom"><span class="privacy-dot"></span> LOCAL &amp; PERSONAL<p>Compatible with Strava<br>Not affiliated with or endorsed by Strava.</p><a href="#privacy" id="privacy-link">Privacy &amp; data</a></div>
+  </aside>
+  <main>
+    <header class="topline"><span>YOUR DAYS IN MOTION</span><nav class="app-tabs" aria-label="My Runs sections"><a href="../">Races</a><a href="./" aria-current="page">Activities</a></nav><div class="connection"><i id="connection-dot"></i><span id="connection-label">Checking connection...</span><span class="avatar" id="avatar">YOU</span></div></header>
+    <section class="page-heading"><div><p class="eyebrow">LESS SCROLLING. MORE REMEMBERING.</p><h1>Your kind of <em>movement.</em></h1><p class="subtitle" id="welcome">A run before sunrise. A ride with no destination. Your activities, in one place.</p></div><div class="heading-actions"><button class="button secondary" id="refresh" hidden>↻ Refresh page</button><button class="button primary" id="connect" disabled>Set up Strava <span>↗</span></button></div></section>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <div id="error" class="error" role="alert" hidden></div>
+    <section class="onboarding" id="onboarding" hidden>
+      <div class="onboarding-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="trail-mark">↗</span><span class="art-caption">THE GOOD KIND OF<br>GOING SOMEWHERE.</span><span class="art-spark">✳</span></div>
+      <div class="onboarding-copy"><p class="eyebrow">A LITTLE SETUP. A WORLD OF MOVEMENT.</p><h2>Your story is already<br>out there.</h2><p>Bring your activities over from Strava. Browse your history, revisit a route, and see the details of the days you got moving.</p><div class="steps"><span>01 <b>Create your API app</b></span><span>02 <b>Authorize your account</b></span><span>03 <b>Explore your activities</b></span></div><button class="button primary" id="get-started">Let's connect <span>↗</span></button><small>Read-only access. Private activities require activity:read_all. Browsing is live; a small summary of each activity is saved only when you sync.</small></div>
+    </section>
+    <section id="connected-bar" hidden>
+      <div class="cache-panel"><span id="cache-note" role="status"></span><button class="button secondary" id="sync-cache">↻ Sync for training stats</button></div>
+      <div class="views" role="group" aria-label="View"><button class="active" data-view="dashboard">Dashboard</button><button data-view="explorer">Activity explorer</button></div>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="explorer-top"><div><p class="eyebrow">YOUR TRAINING, AT A GLANCE</p><h2>Dashboard</h2></div>
+        <div class="range" role="group" aria-label="Period"><button data-days="90">3 months</button><button data-days="180">6 months</button><button class="active" data-days="365">12 months</button><button data-days="0">All time</button></div></div>
+      <div id="dash-empty" class="dash-empty" hidden><h3>Nothing to chart yet.</h3><p>Press <b>Sync for training stats</b> above to save a summary of your activities. The dashboard is built from that local copy, so it opens instantly and uses no Strava requests.</p></div>
+      <div id="dash-body" hidden>
+        <div class="kpis" id="kpis"></div>
+        <div class="dash-grid">
+          <article class="card wide"><div class="card-head"><h3>Weekly distance</h3><span class="legend"><i class="run"></i>Running <i class="other"></i>Other <i class="avg"></i>4-week average <i class="flag"></i>Race</span></div><div id="chart-weeks" class="chart"></div></article>
+          <article class="card"><h3>Where your time goes</h3><div id="sports" class="sports"></div></article>
+          <article class="card"><h3>Consistency</h3><div id="streaks" class="streaks"></div><h4>Busiest weekdays</h4><div id="weekdays" class="chart"></div></article>
+          <article class="card wide"><h3>The past year, day by day</h3><div id="calendar" class="chart"></div><p class="card-note">Darker means more moving time that day. Hover a day for details.</p></article>
+          <article class="card wide" id="months-card"><div class="card-head"><h3>Running by month</h3><span class="legend"><i class="run"></i>Distance <i class="pace"></i>Average pace (higher is faster)</span></div><div id="chart-months" class="chart"></div></article>
+          <article class="card wide"><h3>Records</h3><div id="records" class="records"></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="explorer" hidden>
+      <div class="explorer-top"><div><p class="eyebrow">STRAIGHT FROM YOUR STRAVA</p><h2>Your activity journal</h2></div><span class="live-label"><i></i> Browsing is live</span></div>
+      <div class="workspace">
+        <section class="activity-panel" aria-label="Activity list">
+          <div class="list-tools"><label class="sr-only" for="search">Search this page</label><input id="search" type="search" placeholder="Search this page..." autocomplete="off"><label class="sr-only" for="sport">Sport on this page</label><select id="sport"><option value="">All sports on this page</option></select><p id="page-summary" role="status" aria-live="polite">Loading activities...</p></div>
+          <div id="activity-list" class="activity-list"></div>
+          <p id="empty-list" class="empty-list" hidden></p>
+          <div class="pagination"><button id="previous" class="icon-button" aria-label="Previous activity page" disabled>←</button><span id="page-number">Page 1</span><button id="next" class="icon-button" aria-label="Next activity page" disabled>→</button></div>
+          <p class="list-note">Newest first · 30 activities per page<br>Search and sport filters apply to this page only.</p>
+        </section>
+        <section class="activity-detail" id="activity-detail" aria-label="Selected activity" aria-busy="false">
+          <div id="detail-empty" class="detail-empty"><span>↗</span><h2>A day worth revisiting.</h2><p>Select an activity to see its route and details.</p></div>
+          <div id="detail-content" hidden>
+            <div class="detail-heading"><div><span id="detail-sport" class="sport-badge"></span><h2 id="detail-name"></h2><p id="detail-date"></p></div><a id="strava-link" target="_blank" rel="noopener noreferrer">View on Strava ↗</a></div>
+            <div class="route-map"><svg id="route-map" viewBox="0 0 1000 500" aria-label="Activity GPS route" role="img"><g id="land"></g><path id="route-line"></path><circle id="route-start" r="4" hidden></circle><circle id="route-end" r="4" hidden></circle></svg><div id="no-route" class="no-route" hidden><span>◎</span><strong>No GPS route for this activity</strong><p>Indoor, manual or non-GPS activities may not include a route.</p></div><div class="map-label" id="map-label">GPS trace · offline country outlines, no street tiles</div><div class="map-controls"><button id="zoom-in" aria-label="Zoom route in">+</button><button id="zoom-out" aria-label="Zoom route out">−</button><button id="fit-route" aria-label="Fit activity route">⌂</button></div></div>
+            <div class="metrics" id="metrics"></div>
+            <div class="detail-bottom"><div><h3>The little details</h3><dl id="extra-details"></dl></div><div><h3>A note from your activity</h3><p id="description"></p></div></div>
+            <p class="detail-note">Values are supplied by Strava for this activity. Unreported values are shown as “Not provided”. Routes may include privacy-zone data you authorized.</p>
+          </div>
+        </section>
+      </div>
+      <div class="rate-note" id="rate-note"></div>
+    </section>
+    <footer><span>A little more outside. A little more you.</span><button id="privacy-button">Privacy &amp; data</button><span>Compatible with Strava</span></footer>
+  </main>
+  <dialog id="settings-dialog">
+    <div class="dialog-top"><div><p class="eyebrow">YOUR CONNECTION</p><h2>Make it personal.</h2></div><button class="close" id="close-settings" aria-label="Close settings">×</button></div>
+    <div id="setup-section">
+      <p class="dialog-intro">Create your own API application, then save its credentials on this computer. Never paste secrets into a chat. Or skip the form: set <code>STRAVA_CLIENT_ID</code>, <code>STRAVA_CLIENT_SECRET</code> and <code>STRAVA_REFRESH_TOKEN</code> before starting the server.</p>
+      <ol class="setup-steps"><li>Open <a href="https://www.strava.com/settings/api" target="_blank" rel="noopener noreferrer">Strava API settings ↗</a> and register <b>My Activities</b>. Strava currently requires a subscription to register.</li><li>Set the website to <code>http://127.0.0.1:5173</code> and the <b>Authorization Callback Domain</b> to <code>127.0.0.1</code> (no port or path).</li><li>Copy the <b>Client ID</b> and <b>Client Secret</b> below. You do not need to copy access or refresh tokens.</li></ol>
+      <form id="setup-form"><label for="client-id">Client ID</label><input id="client-id" inputmode="numeric" pattern="[0-9]+" required placeholder="Your numeric client ID" autocomplete="off"><label for="client-secret">Client Secret</label><input id="client-secret" type="password" minlength="8" maxlength="256" required placeholder="Stored only on your local backend" autocomplete="off"><p class="form-note">Saved in an owner-readable local database, not encrypted. Never expose this app to a network or publish its data folder.</p><div id="setup-error" class="error" role="alert" hidden></div><button class="button primary full" id="save-settings" type="submit">Save local connection <span>↗</span></button></form>
+    </div>
+    <div id="configured-section" hidden><p>Your API credentials are saved on this computer. For privacy, they are never returned to the browser.</p><button class="button primary full" id="authorize">Authorize with Strava ↗</button><p class="form-note">You will be redirected to Strava to log in and approve read-only access. Keep “View data about your private activities” checked to include Only You activities.</p></div>
+    <section id="token-section" class="consent">
+      <strong>Or connect with an existing access token</strong>
+      <p>No new login is needed if your token already has <code>activity:read</code> or <code>activity:read_all</code>. Private activities require the latter. The token must have been authorized previously; this does not add permissions.</p>
+      <form id="token-form"><label for="access-token">Access token</label><input id="access-token" type="password" minlength="8" maxlength="256" required autocomplete="off" spellcheck="false" placeholder="Not your Client Secret or refresh token"><p class="form-note">Stored only in the local, unencrypted credential database. Without a refresh token, it cannot renew automatically. Token validation reads your profile and checks one activity response without saving either response.</p><div id="token-error" class="error" role="alert" hidden></div><button class="button primary full" id="save-token" type="submit">Connect with token ↗</button></form>
+    </section>
+    <p id="token-only-note" class="notice" hidden>Connected with an imported access token. It cannot renew automatically. When it expires, import a new token or use Strava authorization.</p>
+    <section class="consent"><strong>What you're sharing</strong><p>Your profile name and location, activity names, dates, sport, routes and available metrics such as distance, heart rate and power. Data is fetched directly from Strava when you browse. Private activities and privacy-zone data are included with your approval. No uploads or activity changes.</p><p>When you press Sync, a small summary of each activity (name, sport, date, distance, moving time and elevation) is saved on this computer so My Runs can total your training between races. Routes, heart rate and power are never saved. There is no background sync, analytics, AI processing or third-party map requests.</p><p>Disconnect below to revoke access and delete the local credentials and saved summaries. You can also revoke access in <a href="https://www.strava.com/settings/apps" target="_blank" rel="noopener noreferrer">Strava settings ↗</a>.</p></section>
+    <div class="danger-zone" id="disconnect-section" hidden><button class="button danger" id="disconnect">Disconnect &amp; delete local connection</button><button class="text-button" id="forget">Forget local connection only</button><small>The second option does not revoke access on Strava. Use it if Strava is unreachable, then revoke access in your Strava settings.</small></div>
+    <div id="connection-error" class="error" role="alert" hidden></div>
+  </dialog>
+  <dialog id="privacy-dialog"><div class="dialog-top"><h2>Local by design.</h2><button class="close" id="close-privacy" aria-label="Close privacy information">×</button></div><p>This is a single-user app for your computer, not a hosted service. It connects only to Strava on your behalf. No tracking, analytics or AI features are included.</p><p>API credentials and refresh tokens persist in a local, owner-readable SQLite file, as do the activity summaries you sync (name, sport, date, distance, moving time, elevation). The file is not encrypted. Other activity and profile data, including routes, is not written to disk and is sent with no-store headers. It stays in page memory only while you browse. There is no service worker or offline activity cache.</p><p>Strava may collect API usage data under its <a href="https://www.strava.com/legal/api_policy" target="_blank" rel="noopener noreferrer">API Policy</a>. Their <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> applies to Strava's own processing.</p><p>For deletion, use Connection settings → Disconnect &amp; delete local connection; it also deletes the synced summaries. You receive confirmation after deletion. If Strava cannot be reached, forget the local connection and revoke it in your Strava account.</p><p>Support: this is your self-hosted application. Setup, troubleshooting and maintenance instructions are in the project's README. No support service receives your information.</p><p>Map outlines: Natural Earth, public domain. No route coordinates are sent to map providers.</p></dialog>
+</body>
+</html>

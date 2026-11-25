@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Sign in · Hub</title>
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+  <script src="/static/theme.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/login.js" defer></script>
+</head>
+<body>
+  <main class="login">
+    <section class="login-card" aria-live="polite">
+      <p class="eyebrow" id="login-eyebrow">Welcome</p>
+      <h1 id="login-title">Who's using Hub?</h1>
+      <p class="lede" id="login-lede">Pick your profile to continue.</p>
+      <div id="login-error" class="error-banner" role="alert" hidden></div>
+
+      <div id="profiles" class="profiles"></div>
+
+      <div id="pin-panel" hidden>
+        <div class="dots" id="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <p class="pin-message" id="pin-message" role="alert"></p>
+        <div class="keypad" id="keypad">
+          <button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button>
+          <button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button>
+          <button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button>
+          <span></span><button type="button" data-digit="0">0</button><button type="button" id="erase" aria-label="Delete last digit">⌫</button>
+        </div>
+        <button class="link-button" id="back" type="button">← Not you? Choose someone else</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

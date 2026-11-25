@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Runs</title>
+  <link rel="icon" href="static/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/shared/hub-link.css">
+  <link rel="stylesheet" href="/shared/app-tabs.css">
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/app.js" defer></script>
+</head>
+<body>
+  <a class="hub-link" href="/" aria-label="Back to hub">⌂ Hub</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="My Runs home"><span class="brand-mark" aria-hidden="true"></span>my runs</a>
+    <nav class="app-tabs" aria-label="My Runs sections"><a href="./" aria-current="page">Races</a><a href="activities/">Activities</a></nav>
+    <div class="topbar-actions">
+      <button class="button" id="sync-strava" disabled>↻ Sync Strava</button>
+      <button class="button primary" id="new-race" disabled>＋ Add race</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">YOUR RACE LOG</p>
+      <h1>Every race, <span>in one place.</span></h1>
+      <p class="subtitle">What you've run, what's coming up, and how you trained to get there.</p>
+      <p class="sync-note" id="sync-note" role="status"></p>
+    </section>
+
+    <div id="global-error" class="error-banner" role="alert" hidden></div>
+
+    <section class="stats" aria-label="Running statistics">
+      <article class="stat"><span class="stat-label">Races run</span><strong id="stat-run">0</strong><small id="stat-run-note"></small></article>
+      <article class="stat"><span class="stat-label">Distance raced</span><strong><span id="stat-km">0</span><small> km</small></strong><small id="stat-km-note"></small></article>
+      <article class="stat"><span class="stat-label">Planned</span><strong id="stat-planned">0</strong><small id="stat-planned-note"></small></article>
+      <article class="stat"><span class="stat-label">Wishlist</span><strong id="stat-wishlist">0</strong><small id="stat-wishlist-note"></small></article>
+      <article class="stat stat-next"><span class="stat-label">Next race</span><strong id="stat-next">—</strong><small id="stat-next-note"></small></article>
+    </section>
+
+    <section class="series" aria-label="Race series">
+      <h2>Race series</h2>
+      <div id="series-list" class="series-list"></div>
+    </section>
+
+    <section class="pbs" aria-label="Personal bests">
+      <h2>Personal bests</h2>
+      <div id="pb-list" class="pb-list"></div>
+    </section>
+
+    <section class="between" id="between" aria-label="Training between two races" hidden>
+      <div class="between-head">
+        <h2>Training between races</h2>
+        <div class="segmented" role="group" aria-label="Which activities to total">
+          <button class="active" data-sport="runs">Runs</button>
+          <button data-sport="all">All activities</button>
+        </div>
+      </div>
+      <div class="between-controls">
+        <label>From <select id="between-from" aria-label="Starting race"></select></label>
+        <label>to <select id="between-to" aria-label="Ending race"></select></label>
+      </div>
+      <div id="between-result" class="training" aria-live="polite"></div>
+    </section>
+
+    <section class="toolbar" aria-label="Filter races">
+      <div class="segmented" role="group" aria-label="Race status">
+        <button class="active" data-status="all">All</button>
+        <button data-status="planned">Planned</button>
+        <button data-status="run">Run</button>
+        <button data-status="wishlist">Wishlist</button>
+      </div>
+      <select id="kind-filter" aria-label="Filter by distance">
+        <option value="">All distances</option>
+        <option value="marathon">Marathon</option>
+        <option value="half">Half-marathon</option>
+        <option value="10k">10k</option>
+        <option value="5.6k">5.6k</option>
+        <option value="other">Other</option>
+      </select>
+      <select id="series-filter" aria-label="Filter by race series">
+        <option value="">All races</option>
+      </select>
+      <input id="search" type="search" placeholder="Search city or race…" aria-label="Search races">
+    </section>
+
+    <div id="race-sections"></div>
+  </main>
+
+  <dialog id="race-dialog">
+    <form id="race-form">
+      <div class="dialog-heading"><h2 id="race-dialog-title">Add a race</h2><button class="icon-button" id="close-race" type="button" aria-label="Close race form">×</button></div>
+      <input type="hidden" id="race-id">
+      <label class="field-label" for="race-title">Race</label>
+      <input id="race-title" maxlength="120" required placeholder="Berlin Half-marathon">
+      <div class="field-row">
+        <div><label class="field-label" for="race-city">City</label><input id="race-city" maxlength="80"></div>
+        <div><label class="field-label" for="race-country">Country</label><input id="race-country" maxlength="80"></div>
+      </div>
+      <div class="field-row">
+        <div>
+          <label class="field-label" for="race-kind">Distance</label>
+          <select id="race-kind">
+            <option value="marathon">Marathon</option>
+            <option value="half">Half-marathon</option>
+            <option value="10k">10k</option>
+            <option value="5.6k">5.6k</option>
+            <option value="other">Other…</option>
+          </select>
+        </div>
+        <div id="distance-field" hidden><label class="field-label" for="race-distance">Kilometres</label><input id="race-distance" type="number" min="0.1" max="1000" step="any"></div>
+      </div>
+      <div class="field-row">
+        <div>
+          <label class="field-label" for="race-status">Status</label>
+          <select id="race-status">
+            <option value="wishlist">Wishlist</option>
+            <option value="planned">Planned</option>
+            <option value="run">Run</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label" for="race-date">Date</label>
+          <input id="race-date" maxlength="10" placeholder="2027-04 or 2027-04-11" pattern="\d{4}-\d{2}(-\d{2})?">
+        </div>
+      </div>
+      <div id="finish-field" hidden>
+        <label class="field-label" for="race-finish">Finish time</label>
+        <input id="race-finish" maxlength="8" placeholder="1:45:30" pattern="\d{1,2}:\d{2}(:\d{2})?">
+      </div>
+      <fieldset class="series-field">
+        <legend class="field-label">Race series</legend>
+        <div id="series-options" class="series-options"></div>
+      </fieldset>
+      <label class="field-label" for="race-notes">Notes</label>
+      <textarea id="race-notes" rows="3" maxlength="2000" placeholder="Course, weather, how it felt…"></textarea>
+      <p class="form-help">A month alone (2027-04) is fine when the exact day isn't known yet.</p>
+      <div id="race-error" class="error-banner" role="alert" hidden></div>
+      <button class="button primary full-width" id="save-race" type="submit">Save race</button>
+    </form>
+  </dialog>
+
+  <dialog id="delete-dialog">
+    <h2>Delete this race?</h2>
+    <p id="delete-name"></p>
+    <div class="dialog-actions"><button class="button" id="cancel-delete">Keep it</button><button class="button danger" id="confirm-delete">Delete race</button></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

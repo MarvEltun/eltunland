@@ -1,0 +1,89 @@
+#hub-offline-controls {
+  position: fixed;
+  z-index: 1000;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: grid;
+  gap: 0.35rem;
+  justify-items: end;
+  max-width: min(22rem, calc(100vw - 2rem));
+  font: 0.875rem/1.35 system-ui, sans-serif;
+}
+
+#hub-sync-button,
+.hub-conflict button {
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: #203d35;
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  box-shadow: 0 0.25rem 1rem #0002;
+  touch-action: manipulation;
+}
+
+#hub-sync-button:disabled {
+  opacity: 0.65;
+}
+
+#hub-sync-status {
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #203d35;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+#hub-sync-status.error {
+  color: #8d2924;
+}
+
+#hub-sync-status.offline {
+  color: #784b05;
+}
+
+.hub-conflict {
+  width: min(28rem, calc(100vw - 2rem));
+  padding: 1.25rem;
+  border: 1px solid #d5d8d1;
+  border-radius: 1rem;
+  color: #203d35;
+  font: 1rem/1.45 system-ui, sans-serif;
+}
+
+.hub-conflict::backdrop {
+  background: #10191499;
+}
+
+.hub-conflict h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.hub-conflict-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hub-conflict-actions button:first-child {
+  background: #e8ebe5;
+  color: #203d35;
+}
+
+.setup {
+  max-width: 42rem;
+  margin: 3rem auto;
+  padding: 1rem;
+  color: #203d35;
+  font: 1rem/1.6 system-ui, sans-serif;
+}
+
+.setup a {
+  color: #17684d;
+}

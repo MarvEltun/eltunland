@@ -1,0 +1,6 @@
+{
+  "accounts": [
+    { "username": "you", "name": "You", "apps": "all" },
+    { "username": "friend", "name": "A Friend", "apps": ["roam", "fitness"] }
+  ]
+}

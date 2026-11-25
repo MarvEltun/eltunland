@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f1">
+  <title>Flight atlas | Roam</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/shared/hub-link.css">
+  <link rel="stylesheet" href="flights.css">
+  <script type="module" src="flights.js"></script>
+</head>
+<body>
+  <a class="hub-link" href="/" aria-label="Back to hub">⌂ Hub</a>
+  <header class="topbar">
+    <a class="brand" href="../">roam<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="../">My world</a><a href="flights.html" aria-current="page">Flight atlas</a></nav>
+    <span class="private"><i></i> LOCAL &amp; PRIVATE</span>
+  </header>
+  <main>
+    <section class="heading"><div><p class="eyebrow">YOUR LIFE, ABOVE THE CLOUDS</p><h1>A world of <em>connections.</em></h1><p class="intro">Every takeoff, every homecoming. See the story your flights tell.</p></div><div class="passport"><span>PERSONAL FLIGHT ATLAS</span><strong id="date-range">Loading your journeys...</strong><span>Not just miles. Memories.</span></div></section>
+    <div id="error" role="alert" hidden></div>
+    <section class="filters" aria-label="Flight filters">
+      <label>Year<select id="year"><option value="">All years</option></select></label>
+      <label>Airline<select id="airline"><option value="">All airlines</option></select></label>
+      <label class="search">Find a journey<input id="search" type="search" placeholder="Airport, city or airline..." autocomplete="off"></label>
+      <button id="reset" class="quiet">Reset filters</button>
+      <span id="result-count" role="status" aria-live="polite">Loading flights...</span>
+    </section>
+    <section class="stats" aria-label="Filtered flight statistics">
+      <article><span class="stat-label">FLIGHTS TAKEN <b>↗</b></span><strong id="flight-count">—</strong><small>individual flight legs</small></article>
+      <article><span class="stat-label">DISTANCE FLOWN <b>⌁</b></span><strong id="distance">—</strong><small id="distance-note">kilometers, airport to airport</small></article>
+      <article><span class="stat-label">AIRPORTS CONNECTED <b>◎</b></span><strong id="airports">—</strong><small id="route-count">across your route network</small></article>
+      <article><span class="stat-label">AROUND THE EARTH <b>◌</b></span><strong id="earth">—</strong><small>equatorial circumferences</small></article>
+    </section>
+    <section class="map-card">
+      <div class="section-top"><div><p class="eyebrow">THE BIG PICTURE</p><h2>Your flight footprint</h2></div><div class="segmented" aria-label="Map region"><button id="fit" class="active">Your network</button><button id="europe">Europe</button><button id="world">World</button></div></div>
+      <div class="map-viewport">
+        <svg id="map" viewBox="0 0 1200 560" role="group" aria-label="Flight route map. Select a route or airport to explore its flights."><g id="land"></g><g id="routes"></g><g id="airport-points"></g></svg>
+        <div class="map-caption"><span class="live-dot"></span><span id="map-summary">Building your atlas</span></div>
+        <div class="map-controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+        <div class="map-key"><span><i></i> Flight path</span><span>◎ Airport</span><span>Thicker lines = more flights</span></div>
+      </div>
+      <div class="selection"><div><strong id="selection-title">A little perspective.</strong><p id="selection-detail">Choose a route on the map or below to explore the flights behind it.</p></div><button id="clear-route" class="quiet" hidden>Clear route ×</button></div>
+    </section>
+    <section class="insights">
+      <article class="card"><p class="eyebrow">CHAPTERS IN THE SKY</p><h2>Through the years</h2><p class="muted">Flight legs per year. Select a year to explore.</p><div id="year-chart" class="year-chart"></div></article>
+      <article class="card"><p class="eyebrow">FAMILIAR CONNECTIONS</p><h2>Your most-flown routes</h2><p class="muted">Both directions, counted together.</p><div id="top-routes" class="rankings"></div></article>
+      <article class="card"><p class="eyebrow">YOUR TRAVEL COMPANIONS</p><h2>Airlines, by flight</h2><p class="muted">Select an airline to follow its journeys.</p><div id="top-airlines" class="rankings"></div></article>
+    </section>
+    <section class="card log">
+      <div class="section-top"><div><p class="eyebrow">EVERY FLIGHT HAS A STORY</p><h2>Your flight log <span id="log-count"></span></h2></div><button id="export" class="outline" disabled>Export filtered CSV ↗</button></div>
+      <div class="table-wrap"><table><thead><tr><th><button id="sort-date">Date ↓</button></th><th>Journey</th><th>Airline</th><th class="numeric">Distance</th></tr></thead><tbody id="flight-log"></tbody></table></div>
+      <p id="empty" class="empty" hidden>No flights match these filters. Try another airport, year or airline.</p>
+      <p class="data-note">* Calculated great-circle distance where your source has no distance. All distances are airport-to-airport, not actual aircraft tracks. Flight times and CO₂ are not estimated.</p>
+    </section>
+    <footer><a class="brand" href="../">roam<span>.</span></a><span>Your flights stay on your computer. No accounts. No trackers.</span><span>Map: Natural Earth · Public domain</span></footer>
+  </main>
+</body>
+</html>
